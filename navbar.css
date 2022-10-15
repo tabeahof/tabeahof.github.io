@@ -1,0 +1,142 @@
+#includeNavbar {
+  display: flex;
+  justify-content: center;
+
+}
+
+.navbar {
+  position: absolute;
+  display: flex;
+  gap: 40px;
+
+  margin: 0 auto 0;
+  padding: 0 10px 15px;
+
+  z-index: 2;
+  overflow: hidden;
+
+  height: 60px;
+  background-color: white;
+}
+
+#desktop {
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+#mobile {
+  justify-content: stretch;
+  align-items: start;
+
+  transition: height .4s;
+}
+
+#burgerList {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  justify-content: center;
+  align-items: start;
+
+  margin-top: 8px;
+  transition: opacity .7s;
+}
+
+@media screen and (min-width: 35em) {
+  .navbar {
+    width: 60vw;
+    min-width: 530px;
+    max-width: 1000px;
+  }
+
+  #mobile {
+    display: none;
+  }
+
+  .con:hover .bar,.special-con:hover .bar {
+    background-color: lightgray;
+  }
+}
+
+@media screen and (max-width: 35em) {
+  .navbar {
+    width: 90vw;
+  }
+
+  #desktop {
+    display: none;
+  }
+}
+
+.navbar > a {
+  color: black;
+  text-decoration: none;
+}
+
+#desktop > a:first-child {
+  min-width: 178px;
+}
+
+#desktop > a:not(:first-child), #mobile > div:first-child > a:not(:first-child) {
+  font-size: 16px;
+  font-weight: bold;
+  -webkit-transition: transform 200ms;
+}
+
+#desktop > a:not(:first-child):hover, #mobile > div:first-child > a:not(:first-child):hover {
+  transform: scale(1.2);
+  color: #ec3838;
+}
+
+main {
+  position: relative;
+  top: 50%;
+}
+
+.con {
+  cursor: pointer;
+  display: inline-block;
+  transform: scale(.7);
+}
+
+.bar {
+  display: block;
+  height: 5px;
+  width: 50px;
+  background: #000000;
+  margin: 10px auto;
+}
+
+.middle {
+  margin: 0 auto;
+}
+
+/*
+.bar {
+  -webkit-transition: transform .7s ease, width .5s ease;
+  -moz-transition: transform .7s ease, width .5s ease;
+  -ms-transition: transform .7s ease, width .5s ease;
+  -o-transition: transform .7s ease, width .5s ease;
+  transition: transform .7s ease, width .5s ease;
+}
+
+.con:hover .top {
+  -webkit-transform: translateY(15px) rotateZ(45deg);
+  -moz-transform: translateY(15px) rotateZ(45deg);
+  -ms-transform: translateY(15px) rotateZ(45deg);
+  -o-transform: translateY(15px) rotateZ(45deg);
+  transform: translateY(15px) rotateZ(45deg);
+}
+
+.con:hover .bottom {
+  -webkit-transform: translateY(-15px) rotateZ(-45deg);
+  -moz-transform: translateY(-15px) rotateZ(-45deg);
+  -ms-transform: translateY(-15px) rotateZ(-45deg);
+  -o-transform: translateY(-15px) rotateZ(-45deg);
+  transform: translateY(-15px) rotateZ(-45deg);
+}
+
+.con:hover .middle {
+  width: 0;
+}*/
