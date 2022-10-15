@@ -1,0 +1,202 @@
+
+@font-face {font-family: Montserrat; src: url('../assets/fonts/Montserrat-Regular.otf');}
+@font-face {font-family: Montserrat; font-weight: bold; src: url('../assets/fonts/Montserrat-Bold.otf');}
+
+html {
+  color: #222;
+  font-size: 1em;
+  font-family: Montserrat, sans-serif;
+  line-height: 1.4;
+
+  scroll-behavior: smooth;
+}
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+body {
+  margin-bottom: 100px;
+}
+
+.main-section {
+  margin-top: 80px;
+}
+
+.centered-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  width: 90vw;
+  margin: auto;
+
+  z-index: 1;
+}
+
+h1 {
+  margin: 10px 0 10px;
+  font-size: 64px;
+}
+
+h2 {
+  margin: 10px 0 10px;
+  font-size: 40px;
+}
+
+h3 {
+  margin: 10px 0 10px;
+  text-align: left;
+  font-size: 25px;
+  font-weight: normal;
+}
+
+p, ul {
+  line-height: 28px;
+  margin: 5px 0 5px;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.URL {
+  color: #ec3838;
+  text-decoration: underline;
+}
+
+
+@media screen and (max-width: 35em) {
+
+  .centered-container {
+    width: 90vw;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+
+  h2 {
+    font-size: 30px;
+  }
+
+  h3 {
+    font-size: 27px;
+  }
+
+  p, ul {
+    line-height: 28px;
+    margin: 5px 0 5px;
+    font-size: .9em;
+  }
+
+
+  table tr {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+}
+
+@media screen and (min-width: 35em) {
+
+  .centered-container {
+    width: 60vw;
+    min-width: 530px;
+    max-width: 1000px;
+  }
+}
+
+.grow_space {
+  flex-grow: 1;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  margin: 30px 0 30px;
+
+  background-color: lightgray;
+}
+
+.image {
+  margin: 50px 0 50px;
+
+  max-width: 100%;
+}
+
+@media screen and (min-width: 35em) {
+  .solo {
+    width: 50%;
+    min-width: 400px;
+    max-width: 600px;
+  }
+}
+
+
+.wide {
+  width: 100%;
+}
+
+.project-header {
+  width: 100%;
+
+  margin: 20px 0 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+@media only screen and (min-width: 35em) {
+  .picture-cell-tall {
+    grid-row: span 2 / auto;
+  }
+  .picture-cell-wide {
+    grid-column: 1 / -1;
+  }
+}
+
+#GooglePlay-link {
+  margin: 20px 0 20px;
+  width: 200px;
+}
+
+video, img {
+  width: 100%;
+}
+
+table {
+  margin: 15px 0 15px;
+
+  border-collapse: separate;
+  border-spacing: 0 .5em;
+}
+
+table > * {
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  padding-right: 1.5em;
+}
